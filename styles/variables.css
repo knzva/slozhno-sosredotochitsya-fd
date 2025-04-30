@@ -8,7 +8,8 @@
   --main-heading-tone: #DB00FF;
   --content-text-tone: #F1B2CE;
   --secondary-text-tone: #000028;
-  --accent-color: #ff0070;
+  --highlight-tone: #ff0070;
   --button-tone: #ff0070;
   --page-background: url(../images/cover-image-dark.png);
+  --background-color: #000028;
 }

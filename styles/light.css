@@ -3,14 +3,16 @@
   Здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
+/* Стили для светлого режима, применяемые при классе theme-light или системной настройке */
 
 :root.theme-light {
-  --accent-color: #ff8dcb;
+  --highlight-tone: #ff8dcb;
   --button-tone: #353430;
   --main-heading-tone: #FFC2E6;
   --content-text-tone: #353430;
   --secondary-text-tone: #353430;
   --page-background: url(../images/cover-image-light.png);
+  --background-color: #FFF1F7;
 }
 
 .theme-light .page {
@@ -27,7 +29,7 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    --accent-color: #ff8dcb;
+    --highlight-tone: #ff8dcb;
     --button-tone: #353430;
     --main-heading-tone: #FFC2E6;
     --content-text-tone: #353430;

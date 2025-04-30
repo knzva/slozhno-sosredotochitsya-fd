@@ -6,7 +6,7 @@
 
 :root.theme-dark {
   --page-background: url(../images/cover-image-dark.png);
-  --accent-color: #ff0070;
+  --highlight-tone: #ff0070;
   --button-tone: #ff0070;
   --main-heading-tone: #DB00FF;
   --content-text-tone: #F1B2CE;
