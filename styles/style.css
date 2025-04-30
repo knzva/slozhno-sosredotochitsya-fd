@@ -270,7 +270,7 @@
   color: var(--main-heading-tone);
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .header {
     min-height: 1024px;
   }
@@ -325,7 +325,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (width <= 767px) {
   .header {
     padding: 10px;
     min-height: 668px;
@@ -391,6 +391,7 @@
   .footer__zone {
     justify-content: center;
     padding: 10px;
+    min-height: 668px;
   }
 
   .footer__main-title {
