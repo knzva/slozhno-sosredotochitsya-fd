@@ -15,10 +15,6 @@
   --background-color: #FFF1F7;
 }
 
-.theme-light .page {
-  background-image: var(--page-background);
-}
-
 .theme-light .header__indicator {
   display: none;
 }

@@ -13,10 +13,6 @@
   --secondary-text-tone: #000028;
 }
 
-.theme-dark .page {
-  background-image: var(--page-background);
-}
-
 .theme-dark .header__indicator {
   display: flex;
 }
