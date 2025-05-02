@@ -1,5 +1,6 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
+/* Общие стили страницы */
 .page {
   background-attachment: fixed;
   background-size: cover;
@@ -10,9 +11,10 @@
   line-height: 23.4px;
   font-weight: 400;
   font-size: var(--text-size);
-  font-family: var(--primary-font, monospace), monospace;
+  font-family: var(--primary-font, monospace);
 }
 
+/* Стили шапки */
 .header {
   grid-template-rows: 1fr min-content 1fr;
   position: relative;
@@ -22,39 +24,46 @@
   min-height: 768px;
 }
 
+/* Стили списка кнопок переключения тем */
 .header__theme-menu-list {
   justify-content: center;
   gap: 10px;
   display: flex;
 }
 
+/* Стили кнопок переключения тем */
 .header__theme-menu-button {
   background: transparent;
   border: 1px solid transparent;
   text-align: center;
   color: var(--button-tone);
   padding: 0 13px;
-  transition: border-color 0.2 ease;
+  transition: border-color 0.2s ease;
 }
 
+/* Стили активной кнопки */
 .header__theme-menu-button_active {
   pointer-events: none;
   border: 1px solid var(--button-tone);
 }
 
+/* Убираем стандартный outline при фокусе */
 .header__theme-menu-button:focus {
   outline: none;
 }
 
+/* Стили при фокусе через клавиатуру */
 .header__theme-menu-button:focus-visible {
   border-bottom: 1px solid var(--button-tone);
 }
 
+/* Стили при наведении на кнопку */
 .header__theme-menu-button:hover {
   cursor: pointer;
-  border-color: rgba (255,0,112,0.4)
+  border-color: rgba(255, 0, 112, 0.4);
 }
 
+/* Стили индикатора REC */
 .header__indicator {
   text-transform: uppercase;
   text-align: center;
@@ -67,6 +76,7 @@
   right: 20px;
 }
 
+/* Красная точка после текста REC */
 .header__indicator::after {
   margin-right: 9px;
   filter: drop-shadow(0px 0px 4px var(--highlight-tone));
@@ -77,6 +87,7 @@
   content: "";
 }
 
+/* Декоративный элемент в правом верхнем углу */
 .decorated-zone::before {
   border-right: 1px solid var(--button-tone);
   border-top: 1px solid var(--button-tone);
@@ -88,6 +99,7 @@
   content: "";
 }
 
+/* Декоративный элемент в левом нижнем углу */
 .decorated-zone::after {
   border-left: 1px solid var(--button-tone);
   border-bottom: 1px solid var(--button-tone);
@@ -99,6 +111,7 @@
   content: "";
 }
 
+/* Главный заголовок в шапке */
 .header__main-title {
   line-height: 82.5%;
   font-weight: 700;
@@ -108,6 +121,7 @@
   margin-left: -20px;
 }
 
+/* Выделенный подзаголовок */
 .header__subtitle--highlight {
   color: var(--secondary-text-tone);
   line-height: 23.4px;
@@ -116,6 +130,7 @@
   font-weight: 700;
 }
 
+/* Подзаголовок в шапке */
 .header__subtitle {
   align-self: center;
   justify-self: end;
@@ -123,6 +138,7 @@
   max-width: 491px;
 }
 
+/* Заголовок секции */
 .section__block-heading {
   line-height: 23.4px;
   font-weight: 700;
@@ -130,30 +146,36 @@
   color: var(--button-tone);
 }
 
+/* Текст в секции */
 .section__block-content-text {
   color: var(--content-text-tone);
   font-size: var(--text-size);
 }
 
+/* Стили ссылок */
 .section__block-content-link {
   text-shadow: 2px 2px 0 var(--highlight-tone);
   text-decoration: none;
 }
 
+/* Эффект наведения на ссылки */
 .section__block-content-link:hover {
   outline: 1px solid var(--content-text-tone);
   outline-offset: -1px;
 }
 
+/* Убираем стандартный outline при фокусе на ссылках */
 .section__block-content-link:focus {
   outline: none;
 }
 
+/* Эффект фокуса через клавиатуру для ссылок */
 .section__block-content-link:focus-visible {
   outline: 1px solid var(--content-text-tone);
   outline-offset: -1px;
 }
 
+/* Секция "Почему сосредоточиться так сложно" */
 .section__block--why {
   margin: 0 20px;
   padding-block-start: 60px;
@@ -161,37 +183,44 @@
   display: grid;
 }
 
+/* Контент внутри секции */
 .section__block-content {
   gap: 10px;
   flex-direction: column;
   display: flex;
 }
 
+/* Отступ для первого параграфа */
 .section__block-content p:first-of-type {
   padding-block-end: 10px;
 }
 
+/* Секция "Что снижает концентрацию внимания" */
 .section__block--what {
   margin: 0 20px;
   padding-block-end: 80px;
   padding-block-start: 80px;
 }
 
-.section__block-content-subline-wrapper {
+/* Контейнер для контента в секции */
+.section__block-content-second-wrapper {
   padding-block-start: 20px;
   gap: 20px;
   grid-template-columns: repeat(3, 1fr);
   display: grid;
 }
 
-.section__block-heading-concatrate {
+/* Заголовок в секции */
+.section__block-heading-second {
   max-width: 315px;
 }
 
-.section__block-content-heading-concatrate {
+/* Подзаголовок в секции */
+.section__block-content-heading-second {
   margin-block-end: 10px;
 }
 
+/* Секция "Как концентрироваться лучше" */
 .section__block--how {
   margin: 0 20px;
   padding-block-end: 80px;
@@ -199,33 +228,40 @@
   display: grid;
 }
 
-.section__block-content-rules {
+/* Контент в секции */
+.section__block-content-third {
   gap: 20px;
   display: grid;
 }
 
+/* Подзаголовок в секции */
 .section__block-content-subheading {
   font-weight: 400;
 }
 
-.section__block-content-text-rules {
+/* Текст в секции */
+.section__block-content-text-third {
   padding-block-start: 10px;
 }
 
+/* Секция галереи */
 .section__block--gallery {
   padding-block-end: 60px;
 }
 
+/* Заголовок галереи */
 .section__block-heading-gallery {
   margin: 0 20px 20px 20px;
 }
 
+/* Контейнер для изображений галереи */
 .section__block-gallery-wrapper {
   gap: 20px;
   display: grid;
   margin: 0 20px;
 }
 
+/* Изображения в галерее */
 .section__block-gallery-item {
   object-position: center;
   object-fit: cover;
@@ -233,28 +269,34 @@
   width: 100%;
 }
 
+/* Позиционирование первого изображения */
 .section__block-gallery-item:first-of-type {
   grid-column: 1 / 3;
 }
 
+/* Позиционирование второго изображения */
 .section__block-gallery-item:nth-of-type(2) {
   grid-row: 1 / 3;
   grid-column: 3 / 4;
 }
 
+/* Позиционирование третьего изображения */
 .section__block-gallery-item:nth-of-type(3) {
   grid-row: 2 / 4;
 }
 
+/* Позиционирование четвертого изображения */
 .section__block-gallery-item:nth-of-type(4) {
   grid-row: 2 / 3;
   grid-column: 2 / 3;
 }
 
+/* Позиционирование последнего изображения */
 .section__block-gallery-item:last-of-type {
   grid-column: 2 / 4;
 }
 
+/* Стили футера */
 .footer__zone {
   justify-content: center;
   align-items: center;
@@ -265,6 +307,7 @@
   min-height: 768px;
 }
 
+/* Главный заголовок в футере */
 .footer__main-title {
   text-shadow: 4px 4px 0 var(--highlight-tone);
   line-height: 82.5%;
@@ -273,6 +316,7 @@
   color: var(--main-heading-tone);
 }
 
+/* Адаптивные стили для планшетов (768px - 1023px) */
 @media (min-width: 768px) and (max-width: 1023px) {
   .header {
     min-height: 1024px;
@@ -305,14 +349,14 @@
     grid-template-columns: 33% 67%;
   }
 
-  .section__block-content-subline-wrapper {
+  .section__block-content-second-wrapper {
     padding-block-start: 20px;
     gap: 20px;
     flex-direction: column;
     display: flex;
   }
 
-  .section__block-heading-concatrate {
+  .section__block-heading-second {
     max-width: 236px;
   }
 
@@ -328,6 +372,7 @@
   }
 }
 
+/* Адаптивные стили для мобильных устройств (<= 767px) */
 @media (width <= 767px) {
   .header {
     padding: 10px;
@@ -371,11 +416,11 @@
     margin: 0 10px;
   }
 
-  .section__block-heading-concatrate {
+  .section__block-heading-second {
     min-width: 355px;
   }
 
-  .section__block-content-subline-wrapper {
+  .section__block-content-second-wrapper {
     flex-direction: column;
     display: flex;
   }
@@ -417,7 +462,8 @@
     margin: 10px;
   }
 
-  .header__indicator, decorated-zone::before {
+  .header__indicator,
+  .decorated-zone::before {
     top: 10px;
     right: 10px;
   }
@@ -425,5 +471,5 @@
   .decorated-zone::after {
     bottom: 10px;
     left: 10px;
-  } 
+  }
 }
