@@ -6,39 +6,39 @@
 /* Стили для светлого режима, применяемые при классе theme-light или системной настройке */
 
 :root.theme-light {
-  --highlight-tone: #ff8dcb;
-  --button-tone: #353430;
-  --main-heading-tone: #FFC2E6;
-  --content-text-tone: #353430;
-  --secondary-text-tone: #353430;
-  --page-background: url(../images/cover-image-light.png);
-  --background-color: #FFF1F7;
+  --background-base-color: #FFF1F7;
+  --background-image: url(../images/cover-image-light.png);
+  --secondary-text-color: #353430;
+  --text-content-color: #353430;
+  --primary-title-color: #FFC2E6;
+  --button-color: #353430;
+  --accent-color: #ff8dcb;
 }
 
-.theme-light .header__indicator {
+.theme-light .header-section__rec-marker {
   display: none;
 }
 
-.theme-light .header__theme-menu-button:hover {
+.theme-light .header-section__theme-btn:hover {
   border: 1px solid rgba(50, 49, 45, 0.4);
 }
 
 @media (prefers-color-scheme: light) {
-  :root {
-    --highlight-tone: #ff8dcb;
-    --button-tone: #353430;
-    --main-heading-tone: #FFC2E6;
-    --content-text-tone: #353430;
-    --secondary-text-tone: #353430;
-    --page-background: url(../images/cover-image-light.png);
-    --background-color: #FFF1F7;
+  :root:not(.theme-dark) {
+    --background-base-color: #FFF1F7;
+    --background-image: url(../images/cover-image-light.png);
+    --secondary-text-color: #353430;
+    --text-content-color: #353430;
+    --primary-title-color: #FFC2E6;
+    --button-color: #353430;
+    --accent-color: #ff8dcb;
   }
 
-  .header__indicator {
+  .header-section__rec-marker {
     display: none;
   }
 
-  .header__theme-menu-button:hover {
+  .header-section__theme-btn:hover {
     border: 1px solid rgba(50, 49, 45, 0.4);
   }
 }

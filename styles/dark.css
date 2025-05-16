@@ -5,18 +5,40 @@
 */
 
 :root.theme-dark {
-  --page-background: url(../images/cover-image-dark.png);
-  --highlight-tone: #ff0070;
-  --button-tone: #ff0070;
-  --main-heading-tone: #DB00FF;
-  --content-text-tone: #F1B2CE;
-  --secondary-text-tone: #000028;
+  --secondary-text-color: #000028;
+  --text-content-color: #F1B2CE;
+  --primary-title-color: #DB00FF;
+  --button-color: #ff0070;
+  --accent-color: #ff0070;
+  --background-image: url(../images/cover-image-dark.png);
 }
 
-.theme-dark .header__indicator {
+/* Отображение индикатора REC в тёмной теме */
+.theme-dark .header-section__rec-marker {
   display: flex;
 }
 
-.theme-dark .header__theme-menu-button:hover {
+/* Эффект наведения на кнопки в тёмной теме */
+.theme-dark .header-section__theme-btn:hover {
   border: 1px solid rgba(255, 0, 112, 0.4);
+}
+
+/* Поддержка системной тёмной темы */
+@media (prefers-color-scheme: dark) {
+  :root:not(.theme-light) {
+    --secondary-text-color: #000028;
+    --text-content-color: #F1B2CE;
+    --primary-title-color: #DB00FF;
+    --button-color: #ff0070;
+    --accent-color: #ff0070;
+    --background-image: url(../images/cover-image-dark.png);
+  }
+
+  .header-section__rec-marker {
+    display: flex;
+  }
+
+  .header-section__theme-btn:hover {
+    border: 1px solid rgba(255, 0, 112, 0.4);
+  }
 }
