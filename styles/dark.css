@@ -5,40 +5,22 @@
 */
 
 :root.theme-dark {
-  --secondary-text-color: #000028;
-  --text-content-color: #F1B2CE;
-  --primary-title-color: #DB00FF;
-  --button-color: #ff0070;
+  --page-background: url(../images/cover-image-dark.png);
   --accent-color: #ff0070;
-  --background-image: url(../images/cover-image-dark.png);
+  --button-tone: #ff0070;
+  --main-heading-tone: #DB00FF;
+  --content-text-tone: #F1B2CE;
+  --secondary-text-tone: #000028;
 }
 
-/* Отображение индикатора REC в тёмной теме */
-.theme-dark .header-section__rec-marker {
+.theme-dark .page {
+  background-image: var(--page-background);
+}
+
+.theme-dark .header__indicator {
   display: flex;
 }
 
-/* Эффект наведения на кнопки в тёмной теме */
-.theme-dark .header-section__theme-btn:hover {
+.theme-dark .header__theme-menu-button:hover {
   border: 1px solid rgba(255, 0, 112, 0.4);
-}
-
-/* Поддержка системной тёмной темы */
-@media (prefers-color-scheme: dark) {
-  :root:not(.theme-light) {
-    --secondary-text-color: #000028;
-    --text-content-color: #F1B2CE;
-    --primary-title-color: #DB00FF;
-    --button-color: #ff0070;
-    --accent-color: #ff0070;
-    --background-image: url(../images/cover-image-dark.png);
-  }
-
-  .header-section__rec-marker {
-    display: flex;
-  }
-
-  .header-section__theme-btn:hover {
-    border: 1px solid rgba(255, 0, 112, 0.4);
-  }
 }

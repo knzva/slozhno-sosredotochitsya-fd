@@ -3,42 +3,47 @@
   Здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
-/* Стили для светлого режима, применяемые при классе theme-light или системной настройке */
 
 :root.theme-light {
-  --background-base-color: #FFF1F7;
-  --background-image: url(../images/cover-image-light.png);
-  --secondary-text-color: #353430;
-  --text-content-color: #353430;
-  --primary-title-color: #FFC2E6;
-  --button-color: #353430;
-  --accent-color: #ff8dcb;
+  --accent-color: #FF8DCB;
+  --button-tone: #353430;
+  --main-heading-tone: #FFC2E6;
+  --content-text-tone: #353430;
+  --secondary-text-tone: #353430;
+  --page-background: url(../images/cover-image-light.png);
 }
 
-.theme-light .header-section__rec-marker {
+.theme-light .page {
+  background-image: var(--page-background);
+}
+
+.theme-light .header__indicator {
   display: none;
 }
 
-.theme-light .header-section__theme-btn:hover {
+.theme-light .header__theme-menu-button:hover {
   border: 1px solid rgba(50, 49, 45, 0.4);
 }
 
 @media (prefers-color-scheme: light) {
-  :root:not(.theme-dark) {
-    --background-base-color: #FFF1F7;
-    --background-image: url(../images/cover-image-light.png);
-    --secondary-text-color: #353430;
-    --text-content-color: #353430;
-    --primary-title-color: #FFC2E6;
-    --button-color: #353430;
-    --accent-color: #ff8dcb;
+  :root {
+    --accent-color: #FF8DCB;
+    --button-tone: #353430;
+    --main-heading-tone: #FFC2E6;
+    --content-text-tone: #353430;
+    --secondary-text-tone: #353430;
+    --page-background: url(../images/cover-image-light.png);
   }
 
-  .header-section__rec-marker {
+  .page {
+    background-image: var(--page-background);
+  }
+
+  .header__indicator {
     display: none;
   }
 
-  .header-section__theme-btn:hover {
+  .header__theme-menu-button:hover {
     border: 1px solid rgba(50, 49, 45, 0.4);
   }
 }
