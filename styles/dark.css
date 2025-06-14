@@ -13,12 +13,8 @@
   --secondary-text-tone: #000028;
 }
 
-.page {
-  background-image: var(--page-background);
-}
-
 .theme-dark .page {
-  background-image: var(--page-background);
+  background-image: url(../images/cover-image-dark.png);
 }
 
 .theme-dark .header__indicator {
@@ -27,4 +23,12 @@
 
 .theme-dark .header__theme-menu-button:hover {
   border: 1px solid rgba(255, 0, 112, 0.4);
+}
+
+.theme-dark .decorated-zone::before {
+  border-color: #FF0070;
+}
+
+.theme-dark .decorated-zone::after {
+  border-color: #FF0070;
 }

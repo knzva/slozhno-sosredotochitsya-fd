@@ -40,9 +40,12 @@ a {
   font-size: inherit;
   line-height: inherit;
 }
-.page {
-  line-height: 23.4px;
-  font-weight: 400;
-  font-size: var(--text-size, 18px);
-  font-family: var(--primary-font, 'IBM Plex mono', monospace);
+
+/* Важно для отображения фонового изображения */
+html {
+  block-size: 100%;
+}
+
+body {
+  min-block-size: 100%;
 }

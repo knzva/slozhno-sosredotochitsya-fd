@@ -14,7 +14,7 @@
 }
 
 .theme-light .page {
-  background-image: var(--page-background);
+  background-image: url(../images/cover-image-light.png);
 }
 
 .theme-light .header__indicator {
@@ -23,6 +23,14 @@
 
 .theme-light .header__theme-menu-button:hover {
   border: 1px solid rgba(50, 49, 45, 0.4);
+}
+
+.theme-light .decorated-zone::before {
+  border-color: #353430;
+}
+
+.theme-light .decorated-zone::after {
+  border-color: #353430;
 }
 
 @media (prefers-color-scheme: light) {
@@ -36,7 +44,7 @@
   }
 
   .page {
-    background-image: var(--page-background);
+    background-image: url(../images/cover-image-light.png);
   }
 
   .header__indicator {
@@ -45,5 +53,13 @@
 
   .header__theme-menu-button:hover {
     border: 1px solid rgba(50, 49, 45, 0.4);
+  }
+  
+  .decorated-zone::before {
+    border-color: #353430;
+  }
+
+  .decorated-zone::after {
+    border-color: #353430;
   }
 }

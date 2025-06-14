@@ -5,11 +5,14 @@
   background-size: cover;
   background-position: center;
   background-image: var(--page-background);
+  background-repeat: no-repeat;
   margin: 0 auto;
   line-height: 23.4px;
   font-weight: 400;
   font-size: var(--text-size);
   font-family: var(--primary-font, monospace);
+  min-inline-size: 375px;
+  max-inline-size: 1440px;
 }
 
 .header {
