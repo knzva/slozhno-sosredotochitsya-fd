@@ -6,11 +6,15 @@
 
 :root.theme-dark {
   --page-background: url(../images/cover-image-dark.png);
-  --accent-color: #ff0070;
-  --button-tone: #ff0070;
+  --accent-color: #FF0070;
+  --button-tone: #FF0070;
   --main-heading-tone: #DB00FF;
   --content-text-tone: #F1B2CE;
   --secondary-text-tone: #000028;
+}
+
+.page {
+  background-image: var(--page-background);
 }
 
 .theme-dark .page {
