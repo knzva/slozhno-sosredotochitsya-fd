@@ -30,7 +30,6 @@
 
 .header__theme-menu-button {
   background: transparent;
-  border: none;
   text-align: center;
   color: var(--button-tone);
   padding: 0 13px;
