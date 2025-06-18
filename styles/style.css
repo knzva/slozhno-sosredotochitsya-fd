@@ -18,7 +18,7 @@
   position: relative;
   display: grid;
   padding: 20px;
-  min-block-size: 100vh;
+  height: 100vh;
   min-height: 768px;
 }
 
@@ -107,7 +107,7 @@
   margin-left: -20px;
 }
 
-.header__subtitle--highlight {
+.section__title-line {
   color: var(--secondary-text-tone);
   line-height: 23.4px;
   font-size: var(--text-size);
@@ -115,10 +115,17 @@
   font-weight: 700;
 }
 
+.section__title-line_sub {
+  font-weight: 400;
+}
+
+.section__title-line + .section__block-content-text {
+  margin-block-start: 10px;
+}
+
 .header__subtitle {
   align-self: center;
   justify-self: end;
-  max-height: 71px;
   max-width: 491px;
 }
 
@@ -149,28 +156,25 @@
 }
 
 .section__block-content-link:focus-visible {
-    outline: 1px solid var(--content-text-tone);
+  outline: 1px solid var(--content-text-tone);
 }
 
 .section__block {
-  /* QWERTY medium */
   display: grid;
   margin: 0 20px;
 }
 
 .section__block--why {
   padding-block-start: 60px;
-  grid-template-columns: 34% 66%;
 }
 
 .section__block-content {
-  gap: 10px;
   flex-direction: column;
   display: flex;
 }
 
 .section__block-content p:first-of-type {
-  padding-block-end: 10px;
+  padding-block-end: 20px;
 }
 
 .section__block--what {
@@ -178,37 +182,26 @@
   padding-block-start: 80px;
 }
 
+.section__block_gapped {
+  display: grid;
+  gap: 20px; 
+}
+
 .section__block-content-what-wrapper {
   padding-block-start: 20px;
-  gap: 20px;
   grid-template-columns: repeat(3, 1fr);
-  display: grid;
 }
 
 .section__block-heading-what {
   max-width: 315px;
 }
 
-.section__block-content-heading-what {
-  margin-block-end: 10px;
+.section__block_columns_two {
+  grid-template-columns: 34% 66%;
 }
 
 .section__block--how {
   padding-block-end: 80px;
-  grid-template-columns: 34% 66%;
-}
-
-.section__block-content-how {
-  gap: 20px;
-  display: grid;
-}
-
-.section__block-content-subheading {
-  font-weight: 400;
-}
-
-.section__block-content-text-how {
-  padding-block-start: 10px;
 }
 
 .section__block--gallery {
@@ -300,12 +293,10 @@
   .section__block--why {
     padding-inline-end: 20px;
     gap: 20px;
-    grid-template-columns: 33% 67%;
   }
 
   .section__block-content-what-wrapper {
     padding-block-start: 20px;
-    gap: 20px;
     flex-direction: column;
     display: flex;
   }
@@ -316,7 +307,6 @@
 
   .section__block--how {
     padding-block-end: 80px;
-    grid-template-columns: 35% 65%;
   }
 
   .footer__zone {
@@ -365,12 +355,10 @@
   }
 
   .header__subtitle {
-    max-height: 117px;
     max-width: 355px;
   }
 
   .section__block {
-    /* QWERTY small */
     margin: 0 10px;
   }
 
