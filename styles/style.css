@@ -291,8 +291,11 @@
   }
 
   .section__block--why {
-    padding-inline-end: 20px;
     gap: 20px;
+  }
+
+  .section__block-heading {
+    max-width: 236px;
   }
 
   .section__block-content-what-wrapper {
