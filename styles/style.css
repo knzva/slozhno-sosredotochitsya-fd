@@ -291,6 +291,7 @@
   }
 
   .section__block--why {
+    padding-right: 20px;
     gap: 20px;
   }
 
@@ -309,7 +310,11 @@
   }
 
   .section__block--how {
-    padding-block-end: 80px;
+    padding-right: 20px;
+  }
+
+  .section__block--how .section__block-content-text {
+    max-width: 472px;
   }
 
   .footer__zone {
